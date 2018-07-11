@@ -4,7 +4,7 @@ This project is a web-based application that reads RSS feeds. The original devel
 
 ## How to run this Project
 
-You can access this project by going [here] (https://davidjenness.github.io/nanodegree-project4/)
+You can access this project by going [here][https://davidjenness.github.io/nanodegree-project4/]
 
 You'll see the most interesting items in the feedreader.js file. I have used comments to show what Rubric item that each test addresses.
 
