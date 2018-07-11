@@ -12,20 +12,22 @@ You'll see that all of the tests will pass.
 None of the tests are dependent on the results of any other tests.
 Callbacks are used when testing the feed in order for the API call to have time to finish.
 
+## Expected Output
 You should see the following test results at the bottom of the page:
 
-## RSS Feeds
+#### RSS Feeds
    has Name
    has URL link
    are defined
-## Initial Entries
+#### Initial Entries
    are loaded completely
-## The menu
+#### The menu
    is hidden by default
    toggles properly
-## New Feed Selection
+#### New Feed Selection
    has content that actually changes   
 
+## Lessons Learned
 One other interesting thing I learned was to always keep the CDN of your libraries up to date. As part of this project I updated the following dependencies.
 
 * JQuery to 3.3.1
