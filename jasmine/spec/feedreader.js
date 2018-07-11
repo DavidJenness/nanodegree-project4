@@ -126,17 +126,25 @@ $(function () {
         //     }, 1);
         // });
 
+        var myFeedHTML1, myFeedHTML2
         beforeEach(function (done) {
             loadFeed(0, function () {
-                var test = $('.feed').html();
-                console.log("test = " + test);
+                 myFeedHTML1 = $('.feed').html();
+                console.log("myFeedHTML1 = " + myFeedHTML1);
                 done();
             });
         });
 
+        beforeEach(function (done) {
+            loadFeed(2, function () {
+                 myFeedHTML2 = $('.feed').html();
+                console.log("myFeedHTML2 = " + myFeedHTML2);
+                done();
+            });
+        });
 
         it('has unique items', function () {
-            expect(value).toBe(1);
+            expect(myFeedHTML1).not.toBe(myFeedHTML2);
         });
 
     });
