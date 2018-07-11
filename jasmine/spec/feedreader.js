@@ -75,11 +75,13 @@ $(function() {
           * clicked and does it hide when clicked again.
           */
 
-         it('has menu toggling properly',function() {
-          
+         it('toggles properly',function() {
+            $('body').toggleClass('menu-hidden'); //Click to un-hide
+            expect(document.getElementsByTagName("body")[0]).not.toHaveClass('menu-hidden');
+            $('body').toggleClass('menu-hidden'); //Click to Hide
+            expect(document.getElementsByTagName("body")[0]).toHaveClass('menu-hidden');
             });
-
-        });
+     });
 
     /* TODO: Write a new test suite named "Initial Entries" */
     describe('Initial Entries', function() {
