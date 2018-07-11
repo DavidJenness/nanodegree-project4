@@ -25,7 +25,6 @@ $(function () {
             });
         });
 
-
         it('has Name', function () {
             allFeeds.forEach(function (entry) {
                 expect(entry.name).toBeDefined();
@@ -56,7 +55,6 @@ $(function () {
         });
 
         it('are loaded completely', function () {
-            console.log("My Feed Length = " + $('.feed').length);
             expect($('.feed').length).not.toBe(0);
         });
     });
@@ -67,7 +65,6 @@ $(function () {
         beforeEach(function (done) {
             loadFeed(0, function () {
                 myFeedHTML1 = $('.feed').html();
-                console.log("myFeedHTML1 = " + myFeedHTML1);
                 done();
             });
         });
@@ -75,7 +72,6 @@ $(function () {
         beforeEach(function (done) {
             loadFeed(2, function () {
                 myFeedHTML2 = $('.feed').html();
-                console.log("myFeedHTML2 = " + myFeedHTML2);
                 done();
             });
         });
