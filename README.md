@@ -26,3 +26,9 @@ You should see the following test results at the bottom of the page:
 ## New Feed Selection
    has content that actually changes   
 
+One other interesting thing I learned was to always keep the CDN of your libraries up to date. As part of this project I updated the following dependencies.
+
+* JQuery to 3.3.1
+* Handlebars JS to 4.0.11
+* Google JS API
+* Jasmine to 3.1.0
