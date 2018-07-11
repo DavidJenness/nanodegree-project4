@@ -64,10 +64,8 @@ $(function() {
          * the CSS to determine how we're performing the
          * hiding/showing of the menu element.
          */
-        it('has menu hidden by default',function() {
-            
-            expect($('menu-hidden2')).toBeDefined();
-
+        it('is hidden by default',function() {
+            expect(document.getElementsByTagName("body")[0]).toHaveClass('menu-hidden');
         });
 
 
