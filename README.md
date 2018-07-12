@@ -24,7 +24,7 @@ You should see the following test results at the bottom of the page:
    are loaded completely
 #### The menu
    is hidden by default
-   toggles properly
+   supports click to open and close
 #### New Feed Selection
    has content that actually changes   
 

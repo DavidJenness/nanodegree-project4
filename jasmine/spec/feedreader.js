@@ -13,13 +13,13 @@ $(function () {
 
     describe('RSS Feeds', function () {
 
-        //Addresses Rubric Step #19 to make sure allFeeds exists and is not empty
+        //Make sure allFeeds exists and is not empty
         it('are defined', function () {
             expect(allFeeds).toBeDefined();
             expect(allFeeds.length).not.toBe(0);
         });
 
-        //Addresses Rubric Step #8
+        //Make sure it has a URL Link
         it('has URL link', function () {
             allFeeds.forEach(function (entry) {
                 expect(entry.url).toBeDefined();
@@ -27,7 +27,7 @@ $(function () {
             });
         });
 
-        //Addresses Rubric Step #9
+        //Make sure it has name
         it('has Name', function () {
             allFeeds.forEach(function (entry) {
                 expect(entry.name).toBeDefined();
@@ -36,40 +36,37 @@ $(function () {
         });
     });
 
-    //Addresses Rubric Step #10
     describe('The menu', function () {
-        
-        //Addresses Rubric Step #11
+
+        //Checks that the menu is hidden by default
         it('is hidden by default', function () {
             expect(document.getElementsByTagName("body")[0]).toHaveClass('menu-hidden');
         });
 
-        //Addresses Rubric Step #12
-        it('toggles properly', function () {
-            $('body').toggleClass('menu-hidden'); //Click to un-hide
+        //Makes sure that you can click to open and close the menu
+        it('supports click to open and close', function () {
+            $('.menu-icon-link').click();
             expect(document.getElementsByTagName("body")[0]).not.toHaveClass('menu-hidden');
-            $('body').toggleClass('menu-hidden'); //Click to Hide
+            $('.menu-icon-link').click()
             expect(document.getElementsByTagName("body")[0]).toHaveClass('menu-hidden');
         });
     });
 
-    //Addresses Rubric Step #13
     describe('Initial Entries', function () {
 
-        //Addresses Rubric Step #14 by loading asynchronously 
+        //Call loadFeed Asynchronously 
         beforeEach(function (done) {
             loadFeed(0, function () {
                 done();
             });
         });
 
-        //Addresses Rubric Step #14
+        //Makes sure there is at least a single entry in the feed container after loadFeed is called
         it('are loaded completely', function () {
-            expect($('.feed').length).not.toBe(0);
+            expect($('.feed .entry').length).not.toBe(0);
         });
     });
 
-    //Addresses Rubric Step #15
     describe('New Feed Selection', function () {
 
         let myFeedHTML1, myFeedHTML2
@@ -90,7 +87,7 @@ $(function () {
             });
         });
 
-        //Addresses Rubric Step #16 by comparing the two results
+        //Compares the results to see if they are different
         it('has content that actually changes', function () {
             expect(myFeedHTML1).not.toBe(myFeedHTML2);
         });
